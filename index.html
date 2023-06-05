@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>CPF e CNPJ</title>
+		<meta charset="UTF-8"/>
+		<meta http-equiv="Content-Security-Policy" content="font-src 'self'"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <link rel="stylesheet" href="style.css"/>
+  </head>
+  <body>
+    <div>Digite um CPF ou CNPJ sem pontos e traços</div>
+    <input type="text" id="dado" value="" maxlength="14" placeholder="CPF ou CNPJ" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');"/>
+    <button id="botao">Validar</button>
+    <div><br/><textarea id="txt" class="noselect" readonly="readonly" unselectable="on" rows="1" cols="30"></textarea></div>
+    <script defer src="js/validacao.js"></script>	
+  </body>
+</html>
